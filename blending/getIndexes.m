@@ -30,8 +30,4 @@ function indexes = getIndexes(mask, targetH, targetW, offsetX, offsetY)
             end
         end
     end
-    
-    
-    
-    
 end

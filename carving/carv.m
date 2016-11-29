@@ -11,7 +11,6 @@
 %                       transport map.
 
 function [Ic, T] = carv(I, nr, nc)
-    [ny, nx, nz] = size(I);
     T = zeros(nr+1, nc+1);
     TI = cell(nr+1, nc+1);
     TI{1,1} = I;
@@ -57,10 +56,10 @@ function [Ic, T] = carv(I, nr, nc)
 
                 if (EU <= EL)
                     T(i, j)  = T(i - 1, j) + EU;
-                    TI{i, j} = Iy;
+                    TI{i, j} = Ix;
                 else
                     T(i, j) = T(i, j - 1) + EL;
-                    TI{i, j} = Ix;
+                    TI{i, j} = Iy;
                 end
             end
         end
